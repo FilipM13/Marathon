@@ -3,7 +3,8 @@
 {% block body %}
 <h1>Profile</h1>
 <p>
-{{ user.username }}
+{{ user.username }}<br>
+<a href="{% url "user_change_password" %}">Change password</a>
 </p>
 
 {% endblock body %}
