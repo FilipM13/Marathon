@@ -24,8 +24,9 @@ from .views import home
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('user/', include('UserManager.urls')),
     path('', home, name='marathon_home'),
-    path('user/', include('UserManager.urls'))
+    path('', include('django.contrib.auth.urls'))
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
